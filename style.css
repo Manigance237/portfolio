@@ -1,0 +1,273 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 15px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4ad9ff, #a259ff);
+  border-radius: 2px;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #4ad9ff;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+  width: 100%;
+}
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      padding-top: 60px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: slideInDown 1s ease-in-out;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #ccc;
+      animation: slideInUp 1s ease-in-out;
+    }
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #4ad9ff;
+  margin-top: 1.5rem;
+  animation: zoomIn 1.5s ease-in-out;
+  box-shadow: 0 8px 32px 0 rgba(74, 217, 255, 0.25), 0 1.5px 8px 0 rgba(162, 89, 255, 0.15);
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+  object-fit: cover;
+  background: linear-gradient(135deg, #4ad9ff 0%, #a259ff 100%);
+  padding: 6px;
+  position: relative;
+}
+
+.profile-img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 12px 40px 0 rgba(74, 217, 255, 0.35), 0 3px 16px 0 rgba(162, 89, 255, 0.25);
+  border-color: #a259ff;
+  filter: brightness(1.08) saturate(1.2);
+}
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    .projet2{
+      height: 45vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.9);
+      background-color: rgb(71, 21, 165);
+      border-radius: 10px;
+    }
+    form input, form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    form button {
+      padding: 10px;
+      background-color: #4ad9ff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Pour la réception des messages */
+#reception-messages {
+  margin: 30px auto 0;
+  max-width: 600px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 60px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(74,217,255,0.08);
+  animation: fadeIn 1.2s;
+}
+
+#reception-messages h3 {
+  font-size: 1.1rem;
+  color: #4ad9ff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#liste-messages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#liste-messages li {
+  margin-bottom: 10px;
+  background: rgba(74,217,255,0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+  animation: fadeInUp 0.7s;
+  border-left: 3px solid #4ad9ff;
+  transition: 0.3s;
+}
+
+#liste-messages li strong {
+  color: #a259ff;
+}
+
+#liste-messages li:hover {
+  background: rgba(162,89,255,0.13);
+}
+/* ...autres styles... */
+
+#reception-messages {
+  margin: 30px auto 0;
+  max-width: 600px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 60px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(74,217,255,0.08);
+  animation: fadeIn 1.2s;
+}
+
+#reception-messages h3 {
+  font-size: 1.1rem;
+  color: #4ad9ff;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#liste-messages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#liste-messages li {
+  margin-bottom: 10px;
+  background: rgba(74,217,255,0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+  animation: fadeInUp 0.7s;
+  border-left: 3px solid #4ad9ff;
+  transition: 0.3s;
+}
+
+#liste-messages li strong {
+  color: #a259ff;
+}
+
+#liste-messages li:hover {
+  background: rgba(162,89,255,0.13);
+}
+
+/* Style pour la zone de réponse */
+.reponse-zone textarea {
+  width: 95%;
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid #a259ff;
+  margin-top: 6px;
+}
+
+.btn-repondre, .btn-envoyer-reponse {
+  margin-top: 8px;
+  background: #a259ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.btn-envoyer-reponse {
+  background: #4ad9ff;
+  color: #222;
+  margin-left: 6px;
+}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideInDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes slideInUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

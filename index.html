@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Étudiant Génie Logiciel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img src="images/photo1.jpg" alt="Profil Étudiant" class="profile-img">
+    <h1 class="animated-title">NJIKEP FRANCK</h1>
+    <p class="animated-subtitle">Étudiant en Génie Logiciel - Passionné par le développement web et l'innovation</p>
+    <p>Langues parlées : Français, Anglais</p>
+  </header>
+
+  <section id="skills">
+    <h2>Compétences</h2>
+    <div class="skills">
+      <div class="card">HTML5 / CSS3 / JS</div>
+      <div class="card">Python / Java</div>
+      <div class="card">VB.NET / C</div>
+      <div class="card">Git & GitHub</div>
+      <div class="card">Responsive Design</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="images/projet1.png" alt="Commande Nourriture">
+        <h3>Site de commande de nourriture en ligne</h3>
+        <p>Plateforme intuitive pour commander des plats auprès de restaurants locaux.</p>
+      </div>
+      <div class="card">
+        <img src="images/projet2.png" alt="Réservation Bus" class="projet2" >
+        <h3>Site de réservation de ticket de bus en ligne</h3>
+        <p>Application web permettant de réserver facilement des billets de bus à travers le pays.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contactForm" onsubmit="event.preventDefault(); envoyerMessage();">
+    <input type="text" name="nom" placeholder="Votre nom" required />
+    <input type="email" name="email" placeholder="Votre email" required />
+    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+  <div id="reception-messages">
+    <h3 >Messages reçus :</h3>
+    <ul id="liste-messages"></ul>
+  </div>
+  <p style="text-align:center; margin-top: 10px;">Ou m'écrire directement sur <a href="https://wa.me/237691351955" style="color:#4ad9ff;">WhatsApp</a></p>
+</section>
+
+
+<script src="script.js"></script>
+
+  <footer>
+    © 2025 NJIKEP FRANCK - Portfolio Étudiant Génie Logiciel
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
